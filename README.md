@@ -1,4 +1,4 @@
-# Simulador de Carrera de Autos
+# Simulador de Carrera de Autos OK
 
 ## Objetivo:
 - Implementar un simulador de carreras de autos por equipos usando **conceptos de POO**.
