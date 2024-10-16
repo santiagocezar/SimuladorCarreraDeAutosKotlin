@@ -27,6 +27,10 @@ open class VehiculoParasigmas (
         println("Nueva velocidadActual luego de frenar: $velocidadActual")
     }
 
+    override fun avanzar() {
+        distanciaRecorrida += velocidadActual
+    }
+
 
     override fun toString(): String {
         return "$nombre: " +
