@@ -5,7 +5,6 @@ open class VehiculoParasigmas (
     aceleracion: Int,
     frenado: Int,
 ): Vehiculo(nombre, velocidadMaxima, combustible, aceleracion, frenado) {
-
     override fun acelerar() {
         if (combustible!=0){
             while ((velocidadActual<=velocidadMaxima) and (combustible>0)){
@@ -28,7 +27,13 @@ open class VehiculoParasigmas (
         println("Nueva velocidadActual luego de frenar: $velocidadActual")
     }
 
-    override fun avanzar() {
 
+    override fun toString(): String {
+        return "$nombre: " +
+        "velocidad actual: ${valocidad}km/h, " +
+        "velocidad máx.: ${velocidadMaxima}km/h, " +
+        "combustible: ${combustible}L, " +
+        "aceleracion: ${aceleracion}km/h², " +
+        "intensidad frenado: ${frenado}km/h²"
     }
 }
