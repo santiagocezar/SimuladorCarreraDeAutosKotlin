@@ -1,3 +1,5 @@
+import com.sun.source.tree.WhileLoopTree
+
 class VehiculoParasigmas (
     nombre: String,
     velocidadMaxima: Int,
@@ -20,10 +22,16 @@ class VehiculoParasigmas (
     }
 
     override fun frenar() {
-
+        if(velocidad>=frenado){
+            velocidad-=frenado
+        }
+        if (velocidad<frenado){
+            velocidad=0
+        }
+        println("Nueva velocidad luego de frenar: $velocidad")
     }
 
     override fun avanzar() {
-        TODO("Not yet implemented")
+
     }
 }
