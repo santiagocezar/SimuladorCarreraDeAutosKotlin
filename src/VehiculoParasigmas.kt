@@ -30,7 +30,8 @@ open class VehiculoParasigmas (
 
     override fun toString(): String {
         return "$nombre: " +
-        "velocidad actual: ${valocidad}km/h, " +
+        "recorrió: ${distanciaRecorrida}km, " +
+        "velocidad actual: ${velocidadActual}km/h, " +
         "velocidad máx.: ${velocidadMaxima}km/h, " +
         "combustible: ${combustible}L, " +
         "aceleracion: ${aceleracion}km/h², " +
