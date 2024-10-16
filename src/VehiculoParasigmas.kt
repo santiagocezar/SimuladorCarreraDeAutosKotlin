@@ -6,13 +6,12 @@ class VehiculoParasigmas (
     combustible: Int,
     aceleracion: Int,
     frenado: Int,
-    var velocidad:Int = 0
 ): Vehiculo(nombre, velocidadMaxima, combustible, aceleracion, frenado) {
 
     override fun acelerar() {
         if (combustible!=0){
-            while ((velocidad<=velocidadMaxima) and (combustible>0)){
-                velocidad+=aceleracion
+            while ((velocidadActual<=velocidadMaxima) and (combustible>0)){
+                velocidadActual+=aceleracion
                 combustible-=1
             }
         }
@@ -22,13 +21,13 @@ class VehiculoParasigmas (
     }
 
     override fun frenar() {
-        if(velocidad>=frenado){
-            velocidad-=frenado
+        if(velocidadActual>=frenado){
+            velocidadActual-=frenado
         }
-        if (velocidad<frenado){
-            velocidad=0
+        if (velocidadActual<frenado){
+            velocidadActual=0
         }
-        println("Nueva velocidad luego de frenar: $velocidad")
+        println("Nueva velocidadActual luego de frenar: $velocidadActual")
     }
 
     override fun avanzar() {
