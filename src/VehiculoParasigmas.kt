@@ -1,6 +1,4 @@
-import com.sun.source.tree.WhileLoopTree
-
-class VehiculoParasigmas (
+open class VehiculoParasigmas (
     nombre: String,
     velocidadMaxima: Int,
     combustible: Int,
