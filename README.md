@@ -51,10 +51,11 @@ clima: La pista permitirá los siguientes tipos de clima: "soleado", "lluvia", "
   - Si está **lloviendo**, la velocidad actual del vehículo disminuye un 50%. 
   - Si hay **niebla**, la velocidad actual disminuye un 80%. 
   - Si está **soleado**, el vehículo consume un 5% adicional de combustible.
+  
 - `cambiarClima()`: Cambia el clima de manera aleatoria utilizando la clase Random. permitiendo condiciones climáticas cambiantes durante la carrera.
 
 - `aplicarEventoAleatorio(vehiculo: Vehiculo)`: Aplica eventos aleatorios al vehículo. Los eventos posibles son:
-  - **Pinchazo**: El vehículo desacelera. 
+  - **Pinchazo**: El vehículo frena. 
   - **Fallo mecánico**: El vehículo se detiene por completo. 
   - **Encontrar combustible**: Aumenta el nivel de combustible en un 20%, teniendo en cuenta que el tanque tiene una capacidad máxima limitada.
   
