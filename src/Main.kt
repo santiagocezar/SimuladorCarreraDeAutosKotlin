@@ -1,10 +1,16 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 fun main() {
-    val pista = Pista(100, "soleado")
-    //TODO instanciar Pista Custom
-    //TODO Instanciar los distintos vehiculos
-    val vehiculos: List<Vehiculo> = listOf()
+    val pista = PistaCustomParasigmas(1000, "soleado")
+
+    val vehiculos: ArrayList<VehiculoParasigmas> = arrayListOf()
+
+    val moto = MotoParasigmas("Coky")
+    vehiculos.add(moto)
+    val camion = MotoParasigmas("Mateote")
+    vehiculos.add(camion)
+    val autoDepo = MotoParasigmas("Chanchi")
+    vehiculos.add(autoDepo)
 
     var ganador: Vehiculo? = null
     var turnos = 0
@@ -22,6 +28,11 @@ fun main() {
         // Simulación de la carrera
         vehiculos.forEach { vehiculo ->
             //TODO: Completar metodos
+            vehiculo.acelerar()
+            vehiculo.avanzar()
+
+            pista.aplicarCondiciones(vehiculo)
+            pista.aplicarEventoAleatorio(vehiculo)
 
             if (vehiculo.distanciaRecorrida >= pista.longitud) {
                 ganador = vehiculo

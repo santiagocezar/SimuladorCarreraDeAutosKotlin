@@ -1,7 +1,8 @@
 abstract class Vehiculo(
     val nombre: String,
     val velocidadMaxima: Int,
-    var combustible: Int,
+    var combustibleActual: Int,
+    var combustibleMaximo: Int,
     val aceleracion: Int,
     val frenado: Int,
 ) {
@@ -17,6 +18,6 @@ abstract class Vehiculo(
     // endregion
 
     override fun toString(): String {
-        return "Velocidad: $velocidadActual km/h | Combustible: $combustible | Distancia: $distanciaRecorrida m"
+        return "Velocidad: $velocidadActual km/h | Combustible/Tanque: $combustibleActual/$combustibleMaximo | Distancia: $distanciaRecorrida m"
     }
 }

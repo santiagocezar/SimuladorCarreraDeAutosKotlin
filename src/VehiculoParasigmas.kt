@@ -1,15 +1,15 @@
 open class VehiculoParasigmas (
     nombre: String,
     velocidadMaxima: Int,
-    combustible: Int,
+    combustibleInicial: Int,
     aceleracion: Int,
     frenado: Int,
-): Vehiculo(nombre, velocidadMaxima, combustible, aceleracion, frenado) {
+): Vehiculo(nombre, velocidadMaxima, combustibleInicial, combustibleInicial, aceleracion, frenado) {
     override fun acelerar() {
-        if (combustible!=0){
-            while ((velocidadActual<=velocidadMaxima) and (combustible>0)){
+        if (combustibleActual!=0){
+            while ((velocidadActual<=velocidadMaxima) and (combustibleActual>0)){
                 velocidadActual+=aceleracion
-                combustible-=1
+                combustibleActual -= 1
             }
         }
         else{
@@ -37,7 +37,7 @@ open class VehiculoParasigmas (
         "recorrió: ${distanciaRecorrida}km, " +
         "velocidad actual: ${velocidadActual}km/h, " +
         "velocidad máx.: ${velocidadMaxima}km/h, " +
-        "combustible: ${combustible}L, " +
+        "combustible: ${combustibleActual}/$combustibleMaximo, " +
         "aceleracion: ${aceleracion}km/h², " +
         "intensidad frenado: ${frenado}km/h²"
     }
